@@ -2,7 +2,7 @@ import { List, Datagrid, TextField, EmailField, TextInput } from "react-admin";
 
 const userFilters = [
     <TextInput label="Suchen (Name)" source="name" alwaysOn />,
-    <TextInput label="Suchen (Username)" source="username" />
+    <TextInput label="Suchen (Username)" source="username" alwaysOn />
 ]
 
 export const UserList = () => (

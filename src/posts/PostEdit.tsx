@@ -1,13 +1,26 @@
-import { Edit, SimpleForm, TextInput } from "react-admin";
+import { Edit, SimpleForm, Toolbar, SaveButton, TextInput } from "react-admin";
 import { bodyValidators, titleValidators } from "../validators/postValidators";
+import { DeactivatePostButton } from "./DeactivatePostButton";
+
+const PostEditToolbar = () => (
+  <Toolbar>
+    <SaveButton />
+    <DeactivatePostButton />
+  </Toolbar>
+);
 
 export const PostEdit = () => (
-    <Edit>
-        <SimpleForm>
-            <TextInput source="id" disabled />
+  <Edit>
+    <SimpleForm toolbar={<PostEditToolbar />}>
+      <TextInput source="id" disabled />
 
-            <TextInput source="title" label="Titel" validate={titleValidators} />
-            <TextInput source="body" label="Inhalt" multiline validate={bodyValidators} />
-        </SimpleForm>
-    </Edit>
-)
+      <TextInput source="title" label="Titel" validate={titleValidators} />
+      <TextInput
+        source="body"
+        label="Inhalt"
+        multiline
+        validate={bodyValidators}
+      />
+    </SimpleForm>
+  </Edit>
+);

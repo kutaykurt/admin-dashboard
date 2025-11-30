@@ -10,12 +10,13 @@ import { UserList } from "./users/UserList";
 import { UserShow } from "./users/UserShow";
 import { UserEdit } from "./users/UserEdit";
 import { UserCreate } from "./users/UserCreate";
+import Dashboard from "./dashboard/Dashboard";
 
 const dataProvider = jsonServerProvider("https://jsonplaceholder.typicode.com");
 
 function App() {
   return (
-    <Admin dataProvider={dataProvider}>
+    <Admin dataProvider={dataProvider} dashboard={Dashboard}>
       <Resource
         name="posts"
         list={PostList}
