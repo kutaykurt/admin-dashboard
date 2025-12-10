@@ -157,7 +157,14 @@ export const ChatLayout = () => {
                                     boxShadow: theme.shadows[1]
                                 }}
                             >
-                                <Typography variant="body2">{msg.text}</Typography>
+                                <Typography
+                                    variant="body2"
+                                    sx={{
+                                        color: msg.sender === "me" ? "#ffffff" : "inherit"
+                                    }}
+                                >
+                                    {msg.text}
+                                </Typography>
                             </Paper>
                             <Typography variant="caption" color="text.secondary" sx={{ mt: 0.5, display: "block", textAlign: msg.sender === "me" ? "right" : "left" }}>
                                 {msg.time}
