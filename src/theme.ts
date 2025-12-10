@@ -171,9 +171,9 @@ const theme = createTheme({
     MuiDrawer: {
       styleOverrides: {
         paper: {
-          backgroundColor: paperColor,
-          color: palette.text.primary,
-          borderRight: `1px solid ${palette.divider}`,
+          backgroundColor: "#1e293b !important", // Dark Sidebar
+          color: "#ffffff !important",
+          borderRight: "none",
         },
       },
     },
