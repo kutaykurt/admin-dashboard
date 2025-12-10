@@ -10,6 +10,7 @@ import ChatBubbleOutlineIcon from "@mui/icons-material/ChatBubbleOutline";
 import ShoppingBagIcon from "@mui/icons-material/ShoppingBag";
 import LocalShippingIcon from "@mui/icons-material/LocalShipping";
 import EventIcon from "@mui/icons-material/Event";
+import ViewKanbanIcon from "@mui/icons-material/ViewKanban";
 
 // Custom Menu Item Component to enforce styling
 const CustomMenuItem = ({ to, primaryText, leftIcon }: any) => {
@@ -125,6 +126,11 @@ const MyMenu = () => {
         to="/posts"
         primaryText="Beiträge"
         leftIcon={<ArticleIcon />}
+      />
+      <CustomMenuItem
+        to="/kanban"
+        primaryText="Kanban"
+        leftIcon={<ViewKanbanIcon />}
       />
 
       <MenuHeader title="System" />

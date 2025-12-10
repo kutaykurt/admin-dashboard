@@ -144,11 +144,11 @@ export const PostList = () => {
 
                     <FunctionField
                         label="Published"
-                        render={(record) => <StatusChip value={record?.published} />}
+                        render={(record: any) => <StatusChip value={record?.published} />}
                     />
                     <FunctionField
                         label="Active"
-                        render={(record) => <StatusChip value={record?.active} />}
+                        render={(record: any) => <StatusChip value={record?.active} />}
                     />
                 </Datagrid>
             </List>

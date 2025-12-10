@@ -14,6 +14,7 @@ import { UserCreate } from "./users/UserCreate";
 import { EventList } from "./events/EventList";
 import { Settings } from "./settings/Settings";
 import { InvoiceList } from "./finance/InvoiceList";
+import { KanbanPage } from "./posts/KanbanPage";
 import { HelpPage } from "./help/HelpPage";
 import { ChatLayout } from "./chat/ChatLayout";
 import { ProductList } from "./ecommerce/ProductList";
@@ -78,6 +79,7 @@ function App() {
         <Route path="/chat" element={<ChatLayout />} />
         <Route path="/settings" element={<Settings />} />
         <Route path="/help" element={<HelpPage />} />
+        <Route path="/kanban" element={<KanbanPage />} />
       </CustomRoutes>
     </Admin>
   );
